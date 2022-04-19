@@ -2,6 +2,8 @@
   "name": "@frogpond/react-native-chrome-custom-tabs",
   "version": "1.0.0",
   "description": "Chrome Custom Tabs for React Native.",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "keywords": [
     "react-native",
     "chrome",
@@ -21,8 +23,9 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "format": "prettier --write ./src index.ts",
-    "lint": "eslint ./src index.ts"
+    "prepublishOnly": "rm -rf dist/ && npx tsc",
+    "format": "prettier --write index.ts",
+    "lint": "eslint index.ts"
   },
   "peerDependencies": {
     "react": ">=17",
@@ -30,8 +33,10 @@
   },
   "devDependencies": {
     "@types/react-native": "^0.67.4",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
     "eslint": "^8.13.0",
-    "eslint-plugin-babel": "^5.3.1",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-native": "^4.0.0",
     "prettier": "^2.6.2",
