@@ -3,10 +3,10 @@
  * @providesModule CustomTabsAndroid
  * @flow
  */
-'use strict';
+"use strict";
 
-import { NativeModules } from 'react-native';
-import type { TabOption } from './TabOption';
+import { NativeModules } from "react-native";
+import type { TabOption } from "./TabOption";
 
 const CustomTabsManager = NativeModules.CustomTabsManager;
 
@@ -15,7 +15,6 @@ const CustomTabsManager = NativeModules.CustomTabsManager;
  * If Chrome is not installed, opens the URL in other browser.
  */
 export default class CustomTabsAndroid {
-
   /**
    * Opens the URL on a Custom Tab.
    *
@@ -23,6 +22,6 @@ export default class CustomTabsAndroid {
    * @param option the Option to customize Custom Tabs of look & feel.
    */
   static openURL(url: string, option: TabOption = {}): Promise<boolean> {
-    return CustomTabsManager.openURL(url, option)
+    return CustomTabsManager.openURL(url, option);
   }
 }

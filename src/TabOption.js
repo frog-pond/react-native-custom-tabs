@@ -1,17 +1,17 @@
 /**
  * @flow
  */
-'use strict';
+"use strict";
 
 /**
  * Start and exit animations of Custom Tabs.
  * Slide in from left at start, Slide out to right.at exit.
  */
 export const ANIMATIONS_SLIDE: Animations = {
-  startEnter: 'slide_in_right',
-  startExit: 'slide_out_left',
-  endEnter: 'android:anim/slide_in_left',
-  endExit: 'android:anim/slide_out_right',
+  startEnter: "slide_in_right",
+  startExit: "slide_out_left",
+  endEnter: "android:anim/slide_in_left",
+  endExit: "android:anim/slide_out_right",
 };
 
 /**
@@ -19,10 +19,10 @@ export const ANIMATIONS_SLIDE: Animations = {
  * Fade in at start, Fade out  at exit.
  */
 export const ANIMATIONS_FADE: Animations = {
-  startEnter: 'android:anim/fade_in',
-  startExit: 'android:anim/fade_out',
-  endEnter: 'android:anim/fade_in',
-  endExit: 'android:anim/fade_out',
+  startEnter: "android:anim/fade_in",
+  startExit: "android:anim/fade_out",
+  endEnter: "android:anim/fade_in",
+  endExit: "android:anim/fade_out",
 };
 
 export type Animations = {
@@ -30,35 +30,34 @@ export type Animations = {
   startExit: string,
   endEnter: string,
   endExit: string,
-}
+};
 
 /**
  * Options to customize Custom Tabs of look & feel.
  */
 export type TabOption = {
-
   /**
    * the Toolbar color.
    * Supported formats are: #RRGGBB, #AARRGGBB, etc.
    *
    * {@link http://d.android.com/reference/android/graphics/Color.html#parseColor(java.lang.String) Color.parseColor(String)}
    */
-  toolbarColor?: string;
+  toolbarColor?: string,
 
   /**
    * Enables the url bar to hide as the user scrolls down on the page.
    */
-  enableUrlBarHiding?: boolean;
+  enableUrlBarHiding?: boolean,
 
   /**
    * Sets whether the title should be shown in the custom tab.
    */
-  showPageTitle?: boolean;
+  showPageTitle?: boolean,
 
   /**
    * Whether to add a default shared items of the menu.
    */
-  enableDefaultShare?: boolean;
+  enableDefaultShare?: boolean,
 
   /**
    * Sets the exit and start animations.
@@ -69,17 +68,15 @@ export type TabOption = {
    * @see ANIMATIONS_FADE
    * @see ANIMATIONS_SLIDE
    */
-  animations?: Animations;
+  animations?: Animations,
 
   /**
    * Sets any custom headers that should be used.
    */
-  headers?: Object;
+  headers?: Object,
 
   /**
    * Workaround that Custom Tabs doesn't close on redirecting back to app scheme.
    */
-  forceCloseOnRedirection?: boolean;
+  forceCloseOnRedirection?: boolean,
 };
-
-
