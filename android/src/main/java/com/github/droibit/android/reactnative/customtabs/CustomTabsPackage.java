@@ -16,11 +16,6 @@ public class CustomTabsPackage implements ReactPackage {
         return Collections.<NativeModule>singletonList(new CustomTabsModule(reactContext));
     }
 
-    // Deprecated RN 0.47
-    public List<Class<? extends JavaScriptModule>> createJSModules() {
-        return Collections.emptyList();
-    }
-
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Collections.emptyList();
