@@ -1,10 +1,3 @@
-/**
- * @private
- * @providesModule CustomTabsAndroid
- * @flow
- */
-"use strict";
-
 import { NativeModules } from "react-native";
 import type { TabOption } from "./TabOption";
 

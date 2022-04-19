@@ -1,9 +1,3 @@
-/**
- * @private
- * @providesModule ChromeIOS
- */
-"use strict";
-
 import { NativeModules } from "react-native";
 import type { TabOption } from "./TabOption";
 
