@@ -8,7 +8,7 @@
   "dependencies": {
     "react": "15.4.2",
     "react-native": "0.42.3",
-    "react-native-custom-tabs": "file:.."
+    "@frogpond/react-native-chrome-custom-tabs": "file:../"
   },
   "devDependencies": {
     "@types/react": "15.0.39",
