@@ -1,39 +1,45 @@
 {
-  "name": "react-native-custom-tabs",
-  "version": "0.1.7",
+  "name": "@frogpond/react-native-chrome-custom-tabs",
+  "version": "1.0.0",
   "description": "Chrome Custom Tabs for React Native.",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "keywords": [
     "react-native",
     "chrome",
     "custom-tabs"
   ],
   "author": {
-    "name": "Shinya Kumagai",
-    "email": "roomful.rooms@gmail.com"
+    "name": "Hawken Rives",
+    "email": "hawkrives@gmail.com"
   },
-  "homepage": "https://github.com/droibit/react-native-custom-tabs",
+  "homepage": "https://github.com/frog-pond/react-native-custom-tabs",
   "bugs": {
-    "url": "https://github.com/droibit/react-native-custom-tabs/issues"
+    "url": "https://github.com/frog-pond/react-native-custom-tabs/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/droibit/react-native-custom-tabs"
+    "url": "https://github.com/frog-pond/react-native-custom-tabs"
   },
   "license": "Apache-2.0",
   "scripts": {
-    "lint": "eslint ./src ./index.js"
+    "prepublishOnly": "rm -rf dist/ && npx tsc",
+    "format": "prettier --write index.ts",
+    "lint": "eslint index.ts"
   },
   "peerDependencies": {
-    "react-native": "*",
-    "react": "*"
+    "react": ">=17",
+    "react-native": ">=0.66"
   },
   "devDependencies": {
-    "react-native": "0.42.3",
-    "react": "15.4.2",
-    "babel-preset-react-native": "1.x.x",
-    "eslint": "3.x.x",
-    "eslint-plugin-babel": "3.x.x",
-    "eslint-plugin-react": "6.x.x",
-    "eslint-plugin-react-native": "2.x.x"
+    "@types/react-native": "^0.67.4",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-native": "^4.0.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
   }
 }
