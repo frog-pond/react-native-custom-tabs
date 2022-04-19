@@ -2,4 +2,6 @@ example/
 .idea/
 .vscode/
 .watchmanconfig
-.eslintrc
+.eslintrc.yaml
+.eslintignore
+tsconfig.json

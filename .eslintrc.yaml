@@ -2,20 +2,24 @@
 root: true
 parser: '@typescript-eslint/parser'
 parserOptions:
-  tsconfigRootDir: ./
+  tsconfigRootDir: './'
   project: ['./tsconfig.json']
+  ecmaVersion: 'latest'
+  sourceType: 'module'
 
 env:
-  es6: true
+  es2022: true
 
 settings:
   react:
-    version: detect
+    version: 'detect'
 
 plugins:
   - '@typescript-eslint'
   - 'react'
   - 'react-native'
+  - 'unicorn'
+  - 'prettier'
 
 extends:
   - 'eslint:recommended'
@@ -23,4 +27,5 @@ extends:
   - 'plugin:@typescript-eslint/recommended-requiring-type-checking'
   - 'plugin:react/recommended'
   - 'plugin:react/jsx-runtime'
-  - 'prettier'
+  - 'plugin:unicorn/recommended'
+  - 'plugin:prettier/recommended'
