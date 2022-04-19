@@ -1,6 +1,6 @@
 {
   "name": "@frogpond/react-native-chrome-custom-tabs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Chrome Custom Tabs for React Native.",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
