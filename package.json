@@ -1,6 +1,6 @@
 {
-  "name": "react-native-custom-tabs",
-  "version": "0.1.7",
+  "name": "@frogpond/react-native-chrome-custom-tabs",
+  "version": "1.0.0",
   "description": "Chrome Custom Tabs for React Native.",
   "keywords": [
     "react-native",
@@ -8,24 +8,24 @@
     "custom-tabs"
   ],
   "author": {
-    "name": "Shinya Kumagai",
-    "email": "roomful.rooms@gmail.com"
+    "name": "Hawken Rives",
+    "email": "hawkrives@gmail.com"
   },
-  "homepage": "https://github.com/droibit/react-native-custom-tabs",
+  "homepage": "https://github.com/frog-pond/react-native-custom-tabs",
   "bugs": {
-    "url": "https://github.com/droibit/react-native-custom-tabs/issues"
+    "url": "https://github.com/frog-pond/react-native-custom-tabs/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/droibit/react-native-custom-tabs"
+    "url": "https://github.com/frog-pond/react-native-custom-tabs"
   },
   "license": "Apache-2.0",
   "scripts": {
     "lint": "eslint ./src ./index.js"
   },
   "peerDependencies": {
-    "react-native": "*",
-    "react": "*"
+    "react-native": ">=0.66",
+    "react": ">=17"
   },
   "devDependencies": {
     "react-native": "0.42.3",
