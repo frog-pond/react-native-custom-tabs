@@ -118,9 +118,9 @@ public class CustomTabsModule extends ReactContextBaseJavaModule {
     }
 
     @VisibleForTesting
-    /* package */ CustomTabsIntent buildIntent(Context context,
-                                               CustomTabsIntent.Builder builder,
-                                               ReadableMap option) {
+        /* package */ CustomTabsIntent buildIntent(Context context,
+                                                   CustomTabsIntent.Builder builder,
+                                                   ReadableMap option) {
         if (option.hasKey(KEY_TOOLBAR_COLOR)) {
             final String colorString = option.getString(KEY_TOOLBAR_COLOR);
             try {
@@ -177,32 +177,32 @@ public class CustomTabsModule extends ReactContextBaseJavaModule {
 
         if (option.hasKey(KEY_FORCE_CLOSE_ON_REDIRECTION) &&
                 option.getBoolean(KEY_FORCE_CLOSE_ON_REDIRECTION)) {
-                  customTabsIntent.intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                  customTabsIntent.intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            customTabsIntent.intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+            customTabsIntent.intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         }
-        
+
         return customTabsIntent;
     }
 
     @VisibleForTesting
-    /* package */ boolean httpOrHttpsScheme(String url) {
+        /* package */ boolean httpOrHttpsScheme(String url) {
         return url.startsWith("http") || url.startsWith("https");
     }
 
     @VisibleForTesting
-    /* package */ void applyAnimation(Context context, CustomTabsIntent.Builder builder, ReadableMap animations) {
+        /* package */ void applyAnimation(Context context, CustomTabsIntent.Builder builder, ReadableMap animations) {
         final int startEnterAnimationId = animations.hasKey(KEY_ANIMATION_START_ENTER)
-            ? resolveAnimationIdentifierIfNeeded(context, animations.getString(KEY_ANIMATION_START_ENTER))
-            : -1;
+                ? resolveAnimationIdentifierIfNeeded(context, animations.getString(KEY_ANIMATION_START_ENTER))
+                : -1;
         final int startExitAnimationId = animations.hasKey(KEY_ANIMATION_START_EXIT)
-            ? resolveAnimationIdentifierIfNeeded(context, animations.getString(KEY_ANIMATION_START_EXIT))
-            : -1;
+                ? resolveAnimationIdentifierIfNeeded(context, animations.getString(KEY_ANIMATION_START_EXIT))
+                : -1;
         final int endEnterAnimationId = animations.hasKey(KEY_ANIMATION_END_ENTER)
-            ? resolveAnimationIdentifierIfNeeded(context, animations.getString(KEY_ANIMATION_END_ENTER))
-            : -1;
+                ? resolveAnimationIdentifierIfNeeded(context, animations.getString(KEY_ANIMATION_END_ENTER))
+                : -1;
         final int endExitAnimationId = animations.hasKey(KEY_ANIMATION_END_EXIT)
-            ? resolveAnimationIdentifierIfNeeded(context, animations.getString(KEY_ANIMATION_END_EXIT))
-            : -1;
+                ? resolveAnimationIdentifierIfNeeded(context, animations.getString(KEY_ANIMATION_END_EXIT))
+                : -1;
 
         if (startEnterAnimationId != -1 && startExitAnimationId != -1) {
             builder.setStartAnimations(context, startEnterAnimationId, startExitAnimationId);
