@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-'use strict';
+"use strict";
 
 declare module "react-native" {
   declare class _NativeModules {
@@ -9,4 +9,4 @@ declare module "react-native" {
     CustomTabsManager: any;
   }
   declare var NativeModules: _NativeModules;
-} 
+}

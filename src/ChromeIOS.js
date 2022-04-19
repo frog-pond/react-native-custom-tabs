@@ -1,12 +1,11 @@
 /**
  * @private
  * @providesModule ChromeIOS
- * @flow
  */
-'use strict';
+"use strict";
 
-import { NativeModules } from 'react-native';
-import type { TabOption } from './TabOption';
+import { NativeModules } from "react-native";
+import type { TabOption } from "./TabOption";
 
 const ChromeManager = NativeModules.DBChromeManager;
 
@@ -15,7 +14,6 @@ const ChromeManager = NativeModules.DBChromeManager;
  * If Chrome is not installed, opens the URL in safari.
  */
 export default class ChromeIOS {
-
   /**
    * Opens the URL on a Chrome.
    *
@@ -23,6 +21,6 @@ export default class ChromeIOS {
    * @param option the Option in iOS is ignored
    */
   static openURL(url: string, option: TabOption = {}): Promise<boolean> {
-    return ChromeManager.openURL(url)
+    return ChromeManager.openURL(url);
   }
 }
