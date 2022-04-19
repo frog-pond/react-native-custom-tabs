@@ -21,19 +21,21 @@
   },
   "license": "Apache-2.0",
   "scripts": {
+    "format": "prettier --write ./src ./index.js",
     "lint": "eslint ./src ./index.js"
   },
   "peerDependencies": {
-    "react-native": ">=0.66",
-    "react": ">=17"
+    "react": ">=17",
+    "react-native": ">=0.66"
   },
   "devDependencies": {
-    "react-native": "0.42.3",
+    "babel-preset-react-native": "^4.0.1",
+    "eslint": "^8.13.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-native": "^4.0.0",
+    "prettier": "^2.6.2",
     "react": "15.4.2",
-    "babel-preset-react-native": "1.x.x",
-    "eslint": "3.x.x",
-    "eslint-plugin-babel": "3.x.x",
-    "eslint-plugin-react": "6.x.x",
-    "eslint-plugin-react-native": "2.x.x"
+    "react-native": "0.42.3"
   }
 }
