@@ -1,7 +1,6 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- * @flow
  */
 
 import React, { Component } from 'react';
@@ -12,7 +11,7 @@ import {
   TouchableHighlight,
   View
 } from 'react-native';
-import { CustomTabs } from 'react-native-custom-tabs';
+import { openURL } from '@frogpond/react-native-chrome-custom-tabs';
 
 export default class Example extends Component {
   render() {
@@ -33,7 +32,7 @@ export default class Example extends Component {
   }
 
   openGoogle() {
-    CustomTabs.openURL('https://www.google.com').then((launched: boolean) => {
+    openURL('https://www.google.com').then((launched) => {
       console.log(`Launched custom tabs: ${launched}`);
     }).catch(err => {
       console.error('An error occurred', err)
